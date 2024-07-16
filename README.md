@@ -1,5 +1,8 @@
+# Overview 
+Experience our all-in-one customer transaction platform, crafted to provide you with in-depth insights into individual patterns, trends, and behaviors. Analyze your data effortlessly and make well-informed decisions with our user-friendly interface.
+
 # Description Task
-(https://drive.google.com/file/d/1MCi0VpSUcty0eP51a5b8WtjdY-aZqQWo/view)
+* https://drive.google.com/file/d/1MCi0VpSUcty0eP51a5b8WtjdY-aZqQWo/view
 
 # React + Vite
 
