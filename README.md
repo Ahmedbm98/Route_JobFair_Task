@@ -18,11 +18,11 @@ Experience our all-in-one customer transaction platform, crafted to provide you 
 If you have any questions, feedback, or suggestions, please feel free to reach out to us at ahmedabasset936@gmail.com. I would love to hear from you!
 
 # Getting Started
-$ git clone https://github.com/Ahmedbm98/Route_JobFair_Task.git
-$ cd Route_JobFair_Task
+> $ git clone https://github.com/Ahmedbm98/Route_JobFair_Task.git
+> $ cd Route_JobFair_Task
 
 ### Then install the dependencies:
-$ npm install
+> $ npm install
 
 ### Running the App:
-$ npm run dev
+> $ npm run dev
