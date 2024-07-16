@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+
+header h1 span {
+    font-family: "Playwrite BE VLG", cursive;
+}
+
+@keyframes ping {
+   75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+   }
+}
+.my-animate {
+   animation: ping 3s linear infinite;
+}

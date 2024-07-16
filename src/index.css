@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   /* font-family: "Cairo", sans-serif; */
+   --sb-track-color: #253238;
+   --sb-thumb-color: #0baf9a;
+   --sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+   width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+   background: var(--sb-track-color);
+   border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: var(--sb-thumb-color);
+   border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+   body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+   }
+}
