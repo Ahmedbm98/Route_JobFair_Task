@@ -54,9 +54,9 @@ export default function BarCharts() {
   return (
     <>
       <div
-        // data-aos="fade-right"
-        // data-aos-offset="300"
-        // data-aos-easing="ease-in-sine"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
         className="w-full my-5 rounded-md border py-3"
       >
         <Bar data={state} options={options}></Bar>

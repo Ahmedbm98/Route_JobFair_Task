@@ -62,10 +62,10 @@ export default function PolarAreaChart() {
   return (
     <>
       <div
-        // data-aos="fade-left"
-        // data-aos-anchor="#example-anchor"
-        // data-aos-offset="500"
-        // data-aos-duration="500"
+        data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500"
         className="w-full h-[400px] my-5"
       >
         <PolarArea

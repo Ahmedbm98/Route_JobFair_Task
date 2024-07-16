@@ -9,8 +9,8 @@ export default function Table() {
   return (
     <>
       <section
-        // data-aos="fade-up"
-        // data-aos-anchor-placement="center-center"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-center"
         className="my-7"
       >
         {/* Search Inputs */}
