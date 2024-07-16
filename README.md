@@ -19,6 +19,7 @@ If you have any questions, feedback, or suggestions, please feel free to reach o
 
 # Getting Started
 > $ git clone https://github.com/Ahmedbm98/Route_JobFair_Task.git
+
 > $ cd Route_JobFair_Task
 
 ### Then install the dependencies:
