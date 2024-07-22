@@ -1,3 +1,5 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   BarElement,
   CategoryScale,
@@ -6,10 +8,9 @@ import {
   LinearScale,
   Tooltip
 } from "chart.js";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { DataContext } from "../../Context/DataContext";
-
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
 
 export default function BarCharts() {
@@ -51,14 +52,13 @@ export default function BarCharts() {
     }
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        className="w-full my-5 rounded-md border py-3"
-      >
+      <div data-aos="fade-right" className="w-full rounded-md border py-3">
         <Bar data={state} options={options}></Bar>
       </div>
     </>

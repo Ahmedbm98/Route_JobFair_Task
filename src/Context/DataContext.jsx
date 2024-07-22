@@ -8,7 +8,7 @@ export default function DataContextProvider({ children }) {
   const [customers, setCustomers] = useState([]);
   const [transactions, setTransactions] = useState([]);
   const [SearchByName, setSearchByName] = useState("");
-  const [SearchByAmount, setSearchByAmount] = useState("");
+  // const [SearchByAmount, setSearchByAmount] = useState("");
   const [selectCustomer, setSelectCustomer] = useState(1);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,12 +41,12 @@ export default function DataContextProvider({ children }) {
   });
   // console.log(DataFiltered);
 
-  // Filter Data For Input search By Amount
-  const filterTransactions = transactions.filter((transaction) => {
-    return SearchByAmount === ""
-      ? transaction
-      : transaction.amount === parseInt(SearchByAmount);
-  });
+  // // Filter Data For Input search By Amount
+  // const filterTransactions = transactions.filter((transaction) => {
+  //   return SearchByAmount === ""
+  //     ? transaction
+  //     : transaction.amount === parseInt(SearchByAmount);
+  // });
   // console.log(filterTransactions);
 
   return (
@@ -54,7 +54,6 @@ export default function DataContextProvider({ children }) {
       <DataContext.Provider
         value={{
           fetchData,
-          setSearchByAmount,
           setSearchByName,
           setSelectCustomer,
           transactions,
@@ -62,8 +61,7 @@ export default function DataContextProvider({ children }) {
           loading,
           error,
           selectCustomer,
-          DataFiltered,
-          filterTransactions
+          DataFiltered
         }}
       >
         {children}

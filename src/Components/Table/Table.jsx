@@ -1,18 +1,20 @@
-import { useContext } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useContext, useEffect } from "react";
 import { DataContext } from "../../Context/DataContext";
 import { dateFormat } from "../../FormateDate/FormateDate";
 import FilterInputs from "../FilterInput/FIlterInput";
 export default function Table() {
-  const { setSelectCustomer, DataFiltered, filterTransactions } =
+  const { setSelectCustomer, DataFiltered, transactions } =
     useContext(DataContext);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   return (
     <>
-      <section
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-center"
-        className="my-7"
-      >
+      <section data-aos="fade-up">
         {/* Search Inputs */}
         <FilterInputs />
 
@@ -53,7 +55,7 @@ export default function Table() {
                     </th>
                     <td className="py-3">
                       <div className="flex flex-col gap-1">
-                        {filterTransactions.map(
+                        {transactions.map(
                           (transaction) =>
                             transaction.customerId === customer.id && (
                               <span key={transaction.id}>
@@ -66,7 +68,7 @@ export default function Table() {
                     </td>
                     <td className="py-3">
                       <div className="flex flex-col gap-1">
-                        {filterTransactions.map(
+                        {transactions.map(
                           (transaction) =>
                             transaction.customerId === customer.id && (
                               <span key={transaction.id}>

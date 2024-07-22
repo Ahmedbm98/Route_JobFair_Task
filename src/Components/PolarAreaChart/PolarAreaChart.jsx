@@ -1,3 +1,5 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   ArcElement,
   CategoryScale,
@@ -8,10 +10,9 @@ import {
   RadialLinearScale,
   Tooltip
 } from "chart.js";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { PolarArea } from "react-chartjs-2";
 import { DataContext } from "../../Context/DataContext";
-
 ChartJS.register(
   Tooltip,
   Legend,
@@ -59,14 +60,16 @@ export default function PolarAreaChart() {
     }
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <div
         data-aos="fade-left"
-        data-aos-anchor="#example-anchor"
-        data-aos-offset="500"
         data-aos-duration="500"
-        className="w-full h-[400px] my-5"
+        className="w-full h-[400px] "
       >
         <PolarArea
           data={state}
